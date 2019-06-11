@@ -3,6 +3,8 @@
 // window.onLoad = function() {
 console.log("Hello from custom.js");
 
+// const client = require('filestack-js').init('filestackToken');
+
 const client = filestack.init(filestackToken);
 const options = {
     onUploadDone: updateForm,

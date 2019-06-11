@@ -4,3 +4,4 @@
 *.ipr
 
 **.token.js
+node_modules/
