@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "American Typewriter", Helvetica, Arial, sans-serif;
+  font: 14px "SignPainter", Helvetica, Arial, sans-serif;
+    text-decoration-color: papayawhip;
 }
 
 a {

@@ -7,29 +7,25 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
-<h1>Filestack Exercise</h1>
-<p>by Carlo Munguia</p>
+<body class="container">
+<img class="text-center img-fluid d-block mx-auto" src="images/filestack.png" alt="Responsive Image">
+<h2 class="text-center"> EXERCISE by Carlo Munguia</h2>
 
-<div class="row">
+<div class="container">
     <form id="pick-form">
-        <div class="field col-md-6 my-2">
-            <div class="control text-center">
-                <button class="button btn btn-primary " type="button" id="picker">Add Pic
+        <div class="field text-center">
+            <div class="control mx-auto">
+                <button class="button btn btn-primary text-center d-block mx-auto" type="button" id="picker">Upload Image
                 </button>
-                <input type="hidden" id="fileupload" name="fileupload"/>
-                <input id="file-url" name="file-url" type="hidden"/>
-                <input id="imageURL" name="imageURL" type="hidden"/>
+                <input type="hidden" id="fileupload" name="fileupload">
+                <input id="file-url" name="file-url" type="hidden">
+                <input id="imageURL" name="imageURL" type="hidden">
                 <input type="hidden">
             </div>
             <div class="control" id="nameBox"></div>
             <div class="control" id="urlBox"></div>
         </div>
-        <div class="field my-2 col-md-6">
-            <div class="control">
-                <input class="button btn btn-primary my-2" type="submit" value="Submit"/>
-            </div>
-        </div>
+
     </form>
 </div>
 <script
