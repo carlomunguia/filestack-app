@@ -29,7 +29,7 @@ const imageUrl = document.getElementById('imageURL');
 pickerBtn.addEventListener('click', function (e) {
     e.preventDefault();
     picker.open();
-    console.log("hello from picker btn");
+    console.log("this is totally working");
 });
 
 form.addEventListener('submit', function (e) {
