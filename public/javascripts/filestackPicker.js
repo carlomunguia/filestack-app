@@ -1,25 +1,17 @@
 'use strict';
 
-console.log('Hello from custom.js');
-
 const client = filestack.init(filestackToken);
-const options = {
+const picker = client.picker({
     onUploadDone: updateForm,
     maxSize: 10 * 1024 * 1024,
-    // accept: 'image/*',
     uploadInBackground: false
-};
-
-const picker = client.picker(options);
+});
 
 // get DOM elements
 
-const form = document.getElementById('formPick');
-const fileInput = document.getElementById('fileUpload');
 const pickerBtn = document.getElementById('picker');
-const imageUrl = document.getElementById('imageURL');
 const container = document.getElementById('container')
-const thumbnailAnchor = document.getElementById('thumbnailAnchor');
+
 // add event listeners
 
 pickerBtn.addEventListener('click', function (e) {
@@ -28,18 +20,13 @@ pickerBtn.addEventListener('click', function (e) {
     console.log('this is totally working');
 });
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Submitting: ' + fileInput.value)
-});
+
 
 // Helper to overwrite input value
 
 function updateForm(result) {
 
     const fileData = result.filesUploaded[0];
-    fileInput.value = fileData.url;
-    imageUrl.value = fileInput.value;
     createAnchor(fileData);
 
     if (fileData.mimetype.indexOf('image/') === 0) {
@@ -90,9 +77,7 @@ function createThumbnail(fileData) {
 }
 
 function getAnchor(fileData) {
-
     const url = document.createElement('a');
     url.href = fileData.url;
     return url;
-
 }
