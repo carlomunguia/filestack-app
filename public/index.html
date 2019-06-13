@@ -11,25 +11,21 @@
 <img class="text-center img-fluid d-block mx-auto px-2" src="images/filestack.png" alt="Responsive Image">
 <h2 class="text-center py-2"> Exercise by Carlo Munguia</h2>
 
-<div class="container">
+<div id="container" class="container">
     <form id="pick-form">
         <div class="field text-center">
             <div class="control mx-auto">
-                <button class="button btn btn-primary text-center d-block mx-auto mt-4" type="button" id="picker">Upload
-                    Image
+                <button class="button btn btn-dark text-center d-block mx-auto mt-4" type="button" id="picker">Upload
+                    File
                 </button>
-                <input type="hidden" id="fileupload" name="fileupload">
-                <input id="file-url" name="file-url" type="hidden">
+                <input type="hidden" id="fileUpload" name="fileUpload">
                 <a id="imageURL" name="imageURL" type="hidden"></a>
                 <input type="hidden">
             </div>
-            <div class="control" id="nameBox"></div>
-            <div class="control" id="urlBox"></div>
+
         </div>
     </form>
-    <a id="thumbnailAnchor">
-        <img id="thumbnail">
-    </a>
+
 </div>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
