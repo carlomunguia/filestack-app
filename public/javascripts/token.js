@@ -1,1 +1,0 @@
-const filestackToken = 'AiFxFcqzyQZCV3xd6ENgAz';
