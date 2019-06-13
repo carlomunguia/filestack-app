@@ -3,5 +3,5 @@
 *.iml
 *.ipr
 
-**.token.js
+public/javascripts/token.js
 node_modules/
