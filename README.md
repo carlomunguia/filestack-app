@@ -9,4 +9,4 @@ const filestackToken = '<YOUR_TOKEN_HERE>;
 ```
 
 #### Run
-`npm run start` 
+`node app` 
