@@ -1,9 +1,6 @@
 "use strict";
 
-// window.onLoad = function() {
 console.log("Hello from custom.js");
-
-// const client = require('filestack-js').init('filestackToken');
 
 const client = filestack.init(filestackToken);
 const options = {
@@ -23,7 +20,8 @@ const pickerBtn = document.getElementById('picker');
 const nameBox = document.getElementById('nameBox');
 const urlBox = document.getElementById('urlBox');
 const imageUrl = document.getElementById('imageURL');
-
+const thumbnail = document.getElementById('thumbnail');
+const thumbnailAnchor = document.getElementById('thumbnailAnchor');
 // add event listeners
 
 pickerBtn.addEventListener('click', function (e) {
@@ -50,4 +48,6 @@ function updateForm (result) {
     nameBox.appendChild(name);
     urlBox.appendChild(document.createTextNode('Upload to: '));
     urlBox.appendChild(url);
+    thumbnail.src = fileData.url;
+    thumbnailAnchor.href = fileData.url;
 }

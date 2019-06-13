@@ -15,19 +15,21 @@
     <form id="pick-form">
         <div class="field text-center">
             <div class="control mx-auto">
-                <button class="button btn btn-primary text-center d-block mx-auto" type="button" id="picker">Upload Image
+                <button class="button btn btn-primary text-center d-block mx-auto mt-4" type="button" id="picker">Upload
+                    Image
                 </button>
                 <input type="hidden" id="fileupload" name="fileupload">
                 <input id="file-url" name="file-url" type="hidden">
-                <input id="imageURL" name="imageURL" type="hidden">
+                <a id="imageURL" name="imageURL" type="hidden"></a>
                 <input type="hidden">
             </div>
             <div class="control" id="nameBox"></div>
             <div class="control" id="urlBox"></div>
-            <a href="filedata.url"
         </div>
-
     </form>
+    <a id="thumbnailAnchor">
+        <img id="thumbnail">
+    </a>
 </div>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
