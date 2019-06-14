@@ -4,6 +4,7 @@ const client = filestack.init(filestackToken);
 const picker = client.picker({
     onUploadDone: updateForm,
     maxSize: 10 * 1024 * 1024,
+    maxFiles: 5,
     uploadInBackground: false
 });
 
@@ -19,8 +20,6 @@ pickerBtn.addEventListener('click', function (e) {
     picker.open();
     console.log('this is totally working');
 });
-
-
 
 // Helper to overwrite input value
 
@@ -42,22 +41,6 @@ function getPreviewUrl(fileData) {
     urlComponents.splice(3, 0, 'preview');
     return urlComponents.join('/');
 }
-
-function createAnchor(fileData) {
-
-    const name = document.createElement('div');
-    name.textContent = 'Selected: ' + fileData.filename;
-    container.appendChild(name);
-
-    const div = document.createElement('div');
-    div.appendChild(document.createTextNode('Upload to: '));
-
-    const url = getAnchor(fileData);
-    url.textContent = fileData.url;
-    div.appendChild(url);
-    container.appendChild(div);
-}
-
 function createPreview(fileData) {
     const iframe = document.createElement('iframe');
     iframe.src = getPreviewUrl(fileData);
@@ -66,18 +49,36 @@ function createPreview(fileData) {
     container.appendChild(iframe);
 }
 
+function getAnchor(fileData) {
+    const url = document.createElement('a');
+    url.href = fileData.url;
+    return url;
+}
+
+function createAnchor(fileData) {
+
+    const name = document.createElement('div');
+    name.textContent = 'Selected: ' + fileData.filename;
+    container.appendChild(name);
+
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode('Uploaded to: '));
+
+    const url = getAnchor(fileData);
+    url.textContent = fileData.url;
+    div.appendChild(url);
+    container.appendChild(div);
+}
+
+
 function createThumbnail(fileData) {
     const anchor = getAnchor(fileData);
 
     const image = document.createElement('img');
     image.src = fileData.url;
     image.style.maxWidth = '100%';
+
     anchor.appendChild(image);
     container.appendChild(anchor);
 }
 
-function getAnchor(fileData) {
-    const url = document.createElement('a');
-    url.href = fileData.url;
-    return url;
-}
