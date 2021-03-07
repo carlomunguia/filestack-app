@@ -1,4 +1,4 @@
-# an Application using the Filestack API
+# FILESTACK APP: an Application using the Filestack API
 
 #### Configure 
 
