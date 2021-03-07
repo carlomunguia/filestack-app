@@ -1,6 +1,6 @@
 # FILESTACK APP: an Application using the Filestack API
 
-*This application uses the Filestack API to choose & display images & other media onto a page*
+*This application uses the Filestack API to choose & display images & other media onto a page.*
 
 #### Configure 
 
