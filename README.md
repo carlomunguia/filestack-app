@@ -1,4 +1,4 @@
-# FILESTACK EXERCISE
+# an Application using the Filestack API
 
 #### Configure 
 
